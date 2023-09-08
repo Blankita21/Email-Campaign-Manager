@@ -1,5 +1,3 @@
-Certainly, here's an extended description for your Django Campaign Management project:
-
 # Django Campaign Management Project
 
 The Django Campaign Management Project is a versatile web application designed to facilitate effective email campaign management. It offers a comprehensive set of features for creating, managing, and sending email campaigns to a targeted subscriber base. Whether you're a marketer, content creator, or business owner, this project can streamline your email marketing efforts.
