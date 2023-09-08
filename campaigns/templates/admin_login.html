@@ -1,0 +1,26 @@
+{% load static %}
+    
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin_login.css' %}">
+</head>
+<body>
+    <h1>Admin Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" name="password" required>
+        </div>
+        <div class="input-group button-container">
+            <input type="submit" value="Login" class="small-button">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Subscriber</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add_subscriber.css' %}">
+</head>
+</head>
+<body>
+    <h1>Add Subscriber</h1>
+
+    {% if messages %}
+    <div class="alert alert-success">
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" required>
+        </div>
+        <div class="input-group">
+            <input type="submit" value="Add Subscriber" class="small-button">
+        </div>
+    </form>
+</body>
+</html>

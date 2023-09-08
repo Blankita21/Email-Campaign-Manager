@@ -1,0 +1,86 @@
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.section input[type="text"],
+.section input[type="url"],
+.section textarea,
+.section input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    max-width: 200px;
+    width: 100%;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+.success-message {
+    background-color: #33cc33;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

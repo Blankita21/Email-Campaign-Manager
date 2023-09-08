@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Homepage</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="title">Welcome to the Homepage</h1>
+    </header>
+
+    {% if messages %}
+    <div class="flash-messages">
+        {% for message in messages %}
+        <p class="flash-message {{ message.tags }}">{{ message }}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    
+    <main>
+        <div class="center-container">
+            <section class="container">
+                <form method="post" class="unsubscribe-form">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <button type="submit" class="button">Unsubscribe</button>
+                </form>
+
+                <nav class="button-container">
+                    <button class="button"><a href="{% url 'add_subscriber' %}">Add Subscriber</a></button>
+                    <button class="button"><a href="{% url 'admin_login' %}">Send Campaign</a></button>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

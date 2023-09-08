@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Campaign</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/send_campaign.css' %}">
+</head>
+<body>
+    <h1>Send Campaign</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="section">
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" id="subject" required>
+        </div>
+        <div class="section">
+            <label for="preview_text">Preview Text:</label>
+            <input type="text" name="preview_text" id="preview_text" required>
+        </div>
+        <div class="section">
+            <label for="article_url">Article URL:</label>
+            <input type="url" name="article_url" id="article_url" required>
+        </div>
+        <div class="section">
+            <label for="html_content">HTML Content:</label>
+            <textarea name="html_content" id="html_content" rows="5" cols="50" required></textarea>
+        </div>
+        <div class="section">
+            <label for="plain_text_content">Plain Text Content:</label>
+            <textarea name="plain_text_content" id="plain_text_content" rows="5" cols="50" required></textarea>
+        </div>
+        <div class="section">
+            <label for="published_date">Published Date:</label>
+            <input type="date" name="published_date" id="published_date" required>
+        </div>
+        <div class="button-container">
+            <input type="submit" value="Send Campaign">
+        </div>
+    </form>
+</body>
+</html>
